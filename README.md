@@ -13,7 +13,7 @@ Features
 How to use this project
 -----------------------
 
-Visit the live link (here)[]! Or clone the repo and run `npm install` and `npm run dev`.
+Visit the live link [here]()! Or clone the repo and run `npm install` and `npm run dev`.
 
 Credits
 -------
