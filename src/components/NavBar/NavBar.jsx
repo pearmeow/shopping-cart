@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
-const NavBar = () => {
+const NavBar = ({ numItems, price = 0 }) => {
     return (
         <>
             <nav>
@@ -11,13 +12,14 @@ const NavBar = () => {
                     <li>
                         <Link to="/store">Store</Link>
                     </li>
-                    <li>
-                        <Link to="/checkout">Checkout</Link>
-                    </li>
                 </ul>
             </nav>
         </>
     );
+};
+
+NavBar.propTypes = {
+    item: PropTypes.number,
 };
 
 export default NavBar;

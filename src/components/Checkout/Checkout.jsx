@@ -4,8 +4,7 @@ const Checkout = () => {
     return (
         <>
             <NavBar />
-            <p>This is the checkout page</p>
-            <p>It will empty the shopping cart</p>
+            <p>Thanks for your patronage!</p>
         </>
     );
 };
