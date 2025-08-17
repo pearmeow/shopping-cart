@@ -44,7 +44,6 @@ const Store = () => {
                 title={data[i].title}
                 price={data[i].price}
                 description={data[i].description}
-                category={data[i].category}
                 image={data[i].image}
                 cart={cart}
                 setCart={setCart}
@@ -54,11 +53,15 @@ const Store = () => {
 
     return (
         <>
-            <NavBar numItems={numItems} price={price} />
-            <Link to="/checkout">
-                Checkout {numItems} items for ${price}
-            </Link>
-            <h1>This is the store</h1>
+            <div className={styles.menuContainer}>
+                <NavBar numItems={numItems} price={price} />
+                <div className={styles.menu}>
+                    <Link to="/checkout" className={styles.checkout}>
+                        Checkout {numItems} items for ${price}
+                    </Link>
+                </div>
+            </div>
+            <h1 className={styles.header}>Store</h1>
             <div className={styles.itemGrid}>{items}</div>
         </>
     );

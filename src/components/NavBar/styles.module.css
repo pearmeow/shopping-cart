@@ -1,0 +1,22 @@
+.listContainer {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    left: 20px;
+    top: 20px;
+    margin: 50px;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    gap: 30px;
+    padding: 30px;
+    align-items: center;
+    font-family: sans-serif, serif;
+    font-size: 22px;
+    font-weight: 700;
+}

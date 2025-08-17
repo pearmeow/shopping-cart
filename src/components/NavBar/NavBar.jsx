@@ -1,25 +1,18 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import styles from "./styles.module.css";
 
-const NavBar = ({ numItems, price = 0 }) => {
+const NavBar = () => {
     return (
         <>
-            <nav>
-                <ul>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/store">Store</Link>
-                    </li>
-                </ul>
-            </nav>
+            <div className={styles.listContainer}>
+                <nav className={styles.list}>
+                    <Link to="/">Home</Link>
+                    <Link to="/store">Store</Link>
+                </nav>
+            </div>
         </>
     );
-};
-
-NavBar.propTypes = {
-    item: PropTypes.number,
 };
 
 export default NavBar;

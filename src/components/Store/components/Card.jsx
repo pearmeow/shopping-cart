@@ -1,20 +1,20 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
+import styles from "./styles.module.css";
 
-const Card = ({
-    id,
-    title,
-    price,
-    description,
-    category,
-    image,
-    cart,
-    setCart,
-}) => {
+const Card = ({ id, title, price, description, image, cart, setCart }) => {
     const [addItems, setAddItems] = useState(1);
     const handleInput = (e) => {
         if (Number(e.target.value) !== 0) {
             setAddItems(Number(e.target.value));
+        }
+    };
+    const incr = () => {
+        setAddItems(addItems + 1);
+    };
+    const decr = () => {
+        if (addItems > 1) {
+            setAddItems(addItems - 1);
         }
     };
     const addToCart = () => {
@@ -37,22 +37,31 @@ const Card = ({
     };
     return (
         <>
-            <div>
+            <div className={styles.item}>
+                <img src={image} alt={title} className={styles.image} />
                 <h3>{title}</h3>
-                <p>{description}</p>
+                <p className={styles.desc}>{description}</p>
                 <p>${price}</p>
 
-                <label htmlFor={id}>Items</label>
-                <input
-                    id={id}
-                    type="number"
-                    min={1}
-                    onChange={handleInput}
-                    value={addItems}
-                />
-                <button type="button" onClick={addToCart}>
-                    Add to cart
-                </button>
+                <div className={styles.interactive}>
+                    <label htmlFor={id}>Items</label>
+                    <input
+                        id={id}
+                        type="number"
+                        min={1}
+                        onChange={handleInput}
+                        value={addItems}
+                    />
+                    <button type="button" onClick={decr}>
+                        -
+                    </button>
+                    <button type="button" onClick={incr}>
+                        +
+                    </button>
+                    <button type="button" onClick={addToCart}>
+                        Add
+                    </button>
+                </div>
             </div>
         </>
     );

@@ -1,5 +1,39 @@
+.header {
+    display: flex;
+    font-family: sans-serif, serif;
+    font-size: 50px;
+    justify-content: center;
+}
+
 .itemGrid {
+    max-width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 30px;
+    padding: 20px 30px;
+}
+
+.menuContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: sticky;
+    gap: 0px 30px;
+    top: 0px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.checkout {
+    font-family: sans-serif, serif;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 30px;
 }
