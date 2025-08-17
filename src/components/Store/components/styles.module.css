@@ -47,4 +47,5 @@
 
 .desc {
     flex: 1;
+    overflow-wrap: break-word;
 }
