@@ -1,0 +1,21 @@
+.header1,
+.header2,
+.header3 {
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif, serif;
+    font-weight: 700;
+    align-items: center;
+}
+
+.header1 {
+    font-size: 50px;
+}
+
+.header2 {
+    font-size: 40px;
+}
+
+.header3 {
+    font-size: 35px;
+}
