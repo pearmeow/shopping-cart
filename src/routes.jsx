@@ -7,7 +7,7 @@ import ErrorPage from "./components/ErrorPage/ErrorPage";
 const routes = [
     {
         path: "/",
-        element: <App />,
+        Component: App,
         errorElement: <ErrorPage />,
     },
     {
@@ -19,7 +19,7 @@ const routes = [
     },
     {
         path: "/checkout",
-        element: <Checkout />,
+        Component: Checkout,
     },
 ];
 
