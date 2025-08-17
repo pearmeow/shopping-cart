@@ -12,10 +12,7 @@ const routes = [
     },
     {
         path: "/store",
-        children: [
-            { index: true, Component: Store },
-            { path: ":itemId", Component: Item },
-        ],
+        Component: Store,
     },
     {
         path: "/checkout",

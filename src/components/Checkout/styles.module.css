@@ -1,0 +1,8 @@
+.checkout {
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif, serif;
+    font-size: 50px;
+    font-weight: 700;
+    align-items: center;
+}
